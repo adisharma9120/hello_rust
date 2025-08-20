@@ -67,16 +67,3 @@
 // }
 
 //
-// Mutable refrence in  borrowing and reference..
-
-fn main()
-{
-    let  mut s1 = String::from("hloo");
-    update_str(&  mut s1); 
-    print!("{}",s1);
-}
- fn update_str(s:& mut String)
- {
-    s.push_str(" world"); //cannot borrow `*s` as mutable, as it is behind a `&` reference
-// `s` is a `&` reference, so the data it refers to cannot be borrowed as mutable
- }

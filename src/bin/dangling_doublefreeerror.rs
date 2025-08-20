@@ -15,9 +15,3 @@ let s1 = String::from("hi there");
 
 //Example -> 1;
 
-// passing Strings (heap variable ) to function as args
-
-fn main ()
-{
-    let my_string = String::from("hello");
-}
