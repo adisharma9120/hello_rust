@@ -9,13 +9,10 @@ struct  User {
     let user  = User{
         name: name,
         age: 32,
-        
+         
     };
     println!("{} is {} year old.", user.name, user.age)
  }
-
-
-
 
 
 
