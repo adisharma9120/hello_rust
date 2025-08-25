@@ -34,7 +34,6 @@
 //     }
 //     println!("Outside block y = {}", y);   // ❌ Error, kyunki y destroy ho gaya
 // } */
-
 // fn main()
 // {
 //     let my_string= String::from("hello");
@@ -53,5 +52,5 @@ fn main() {
     let s2 = &s1;
 
     println!("{}", s2);
-    println!("{}", s1) // this is  valid ,The first pointer wasn't invalidated\
+    println!("{}", s1); // this is  valid ,The first pointer wasn't invalidated\
 }

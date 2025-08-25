@@ -7,8 +7,9 @@ fn divide(a: i32, b: i32) -> Result<i32, String> {
 }
 
 fn main() {
-    match divide(10, 0) {
+    match divide(10, 10) {
         Ok(result) => println!("Result = {}", result),
         Err(e) => println!("Error: {}", e),
     }
 }
+ 
