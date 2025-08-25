@@ -13,3 +13,4 @@ fn main() {
         None => println!("Error: Cannot divide by zero!"),
     }
 }
+
