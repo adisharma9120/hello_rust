@@ -1,23 +1,15 @@
-fn main() {
-    let n: i32 = 10; // Example: 10th Fibonacci number
-    let ans = fib(n);
-    println!("Fibonacci({}) = {}", n, ans);
-}
+fn  main(){
+    let n =10;;
+    let mut a = 0;
+    let mut b = 1;
+     
+     println!("fibonacci  up to {}",n);
+    
 
-fn fib(num: i32) -> i32 {
-    if num == 0 {
-        return 0;
-    } else if num == 1 {
-        return 1;
-    }
-
-    let mut first = 0;
-    let mut second = 1;
-
-    for _ in 2..=num {
-        let temp = second;
-        second = second + first;
-        first = temp;
-    }
-    second
+ for _ in 0..n  {
+   println!("{}",a);
+   let temp =a+b;
+   a=b;
+   b= temp;
+ }
 }
