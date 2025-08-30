@@ -93,3 +93,4 @@ fn main() {
     // Rect::destroy(rect3);
     // ab rect3 use nahi ho sakta yaha, kyunki ownership consume ho gayi
 }
+ 
