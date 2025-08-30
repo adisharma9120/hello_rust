@@ -19,10 +19,28 @@ fn main() {
 }
  */
 
- struct Rect {
+struct Rect {
     width: u32,
     height: u32,
 }
+/*
+ this in a js class
+
+  class React{
+   constructor{width, height }
+{
+   this.width = width;
+   this.height = height;
+   }
+
+  area(){
+  return this.width*this.heigth}
+     }
+}
+      const react1 new = new React(10, 20)
+      console.log(react1.area())
+
+*/
 
 impl Rect {
     // 1. Method jo sirf borrow karega (read-only)
@@ -44,7 +62,10 @@ impl Rect {
 }
 
 fn main() {
-    let rect = Rect { width: 10, height: 5 };
+    let rect = Rect {
+        width: 10,
+        height: 5,
+    };
 
     // ----------- &self wala case -----------
     // shortcut:
@@ -53,14 +74,20 @@ fn main() {
     println!("Area (expanded): {}", Rect::area(&rect));
 
     // ----------- &mut self wala case -----------
-    let mut rect2 = Rect { width: 3, height: 4 };
+    let mut rect2 = Rect {
+        width: 3,
+        height: 4,
+    };
     rect2.double_size(); // shortcut
     // expansion:
     Rect::double_size(&mut rect2);
     println!("After double_size -> {}x{}", rect2.width, rect2.height);
 
     // ----------- self wala case -----------
-    let rect3 = Rect { width: 7, height: 2 };
+    let rect3 = Rect {
+        width: 7,
+        height: 2,
+    };
     rect3.destroy(); // shortcut
     // expansion:
     // Rect::destroy(rect3);
