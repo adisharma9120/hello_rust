@@ -11,7 +11,4 @@ let s1 = String::from("hi there");
     print!("{}",s1);
     let s2 = s1;
     println!("{}",s2);
-} 
-
-//Example -> 1;
-
+}
