@@ -1,19 +1,17 @@
 fn main() {
-    let index = find_first_a(String::from("aditrya"));
+    let index = find_first_y("aditrya");
 
-    if index == -1 {
-        println!("a not found");
-    } else {
-        println!("index is {}", index);
+    match index {
+        Some(i) => println!("index is {}", i),
+        None => println!("y not found"),
     }
 }
 
-fn find_first_a(s: String) -> i32 {
-    for (index, char) in s.chars().enumerate() {
-        if char == 'y' {
-            return index as i32;
+fn find_first_y(s: &str) -> Option<usize> {
+    for (index, ch) in s.chars().enumerate() {
+        if ch == 'y' {
+            return Some(index);
         }
     }
-    return -1; 
+    None
 }
-  
