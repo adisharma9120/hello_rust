@@ -38,3 +38,11 @@ fn calculate_length(s: &String) -> usize {
 fn give_back_ownership() -> String {
     String::from("New Owned String")
 }
+
+/* 
+Yahaan kya seekhne ko mila?
+Immutable borrow (&name) → sirf padh sakte ho.
+Mutable borrow (&mut name) → modify kar sakte ho.
+Ownership move (take_ownership) → name ki ownership function ko chali gayi.
+Ownership return → function ne String return karke ownership wapas di.
+Combining borrow + ownership → tum ek string ko multiple tariko se use kar pa rahe ho bina duplicate banaye. */
