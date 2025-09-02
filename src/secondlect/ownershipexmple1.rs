@@ -1,4 +1,4 @@
-fn main() {
+/* fn main() {
     // ---- Ownership ----
     let s1 = String::from("Aditya");
     takes_ownership(s1);
@@ -35,3 +35,5 @@ fn gives_ownership() -> String {
     let s = String::from("Rusty");
     s
 }
+ */
+
