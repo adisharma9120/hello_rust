@@ -7,7 +7,7 @@
  fn create_string(){
 
     create_string();
- } */
+ } 
 
 fn create_string() -> String {
     let s = String::from("hello from function");
@@ -37,4 +37,37 @@ fn main() {
 fn print_string(s: &String) {
     println!("Function borrowed: {}", s);
 }
-guit 
+*/
+
+// Ek struct banaya jisme ek String hai
+struct Person {
+    name: String,
+}
+
+impl Person {
+    // immutable borrow (sirf padne ke liye)
+    fn greet(&self) {
+        println!("Hello, my name is {}", self.name);
+    }
+
+    // mutable borrow (update karne ke liye)
+    fn rename(&mut self, new_name: &str) {
+        self.name = String::from(new_name);
+    }
+}
+
+fn main() {
+    // Ownership ke sath ek Person banaya
+    let mut p1 = Person {
+        name: String::from("Aditya"),
+    };
+
+    // immutable borrow
+    p1.greet();
+
+    // mutable borrow karke naam badal diya
+    p1.rename("Aditya Kumar Sharma");
+
+    // dobara use kiya, ab updated value dikh rahi hai
+    p1.greet();
+}
