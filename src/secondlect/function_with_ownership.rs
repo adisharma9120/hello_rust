@@ -1,4 +1,4 @@
-fn main() {
+/* fn main() {
     let s = String::from("hello"); // s comes into scope
 
     takes_ownership(s); // s's value moves into the function...
@@ -21,4 +21,15 @@ fn takes_ownership(some_string: String) {
 fn makes_copy(some_integer: i32) {
     // some_integer comes into scope
     println!("{some_integer}");
-} // Here, some_integer goes out of scope. Nothing special happens.
+} // Here, some_integer goes out of scope. Nothing special happens. */
+fn main() {
+    let mut s = String::from("hello");
+
+    let r1 = &s; // no problem
+    let r2 = &s; // no problem
+    println!("{r1} and {r2}");
+    // Variables r1 and r2 will not be used after this point.
+
+    let r3 = &mut s; // no problem
+    println!("{r3}");
+}
