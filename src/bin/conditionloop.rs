@@ -3,14 +3,14 @@
 /* /* fn main(){
     let number = 21;
 
- 
+
  if  number % 2 != 1{
     println!("The number is even");
 }else{
-  println!("the number is odd")  
+  println!("the number is odd")
 }
 
-} 
+}
 fn main()
 {
     let is_even = true;
@@ -49,7 +49,7 @@ if number % 2 == 0
 else{
     println!("the number is odd");
 }
-} 
+}
 
 
  fn main(){
@@ -58,14 +58,14 @@ else{
     for i in 0..12{
         println!("{}",i);
     }hnnha
- } 
+ }
  */
  fn main(){
     // array , maps and strings
 
     let sentence  = String::from("my name is aditya");
-    let fist_word    = get_first_word(sentence); 
-     
+    let fist_word    = get_first_word(sentence);
+
      println!("first_word is: {}", fist_word);
  }
 

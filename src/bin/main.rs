@@ -8,7 +8,7 @@
     println!("z: {}", z);
 }
  */
-/* 
+/*
  fn main() {
     let mut x: i32 = 10; // mutable because we are changing x
 
@@ -18,8 +18,8 @@
 
     println!("x = {}", x); // println! for newline after printing
 }
- 
- 
+
+
 
 
 fn main(){
@@ -38,12 +38,11 @@ fn main(){
         print!("you are a legal man");
     }
 }
- 
+
 */
 
-
 // STRING
-/* 
+/*
 fn main(){
     let greeting: String = String::from("hello world");
     println!("{}" , greeting);
@@ -63,11 +62,9 @@ function main(){
     console.log(greeting[0]);
 }
 main(); */
-fn main(){
+
+fn main() {
     let n: i32 = 12;
-     
-     for i in 0..10
-     {
-    println!("{}x{}={}",n,i,n * i);
-     }
-}
+
+    for i in 0..10 {
+        println!("{}x{}={}", n, i, n * 
