@@ -1,13 +1,11 @@
-fn main()   
-{
-    let s1 = String::from("aditya");
-    // let s2 = s1;
+fn main() {
+    let mut s1 = String::from("aditya");
 
-    do_something(s1.clone());
-            println!("number is {}", s1);
+    s1 = do_something(s1.clone());   // ✅ function se return value assign karna
+    println!("number is {}", s1);
+}
 
-    }
-
-    fn do_something(s2: String){
-        println!("{}",s2);
+fn do_something(s2: String) -> String {   // ✅ return type declare karna
+    println!("{}", s2);
+    return s2;   // return karna ab valid hai
 }
