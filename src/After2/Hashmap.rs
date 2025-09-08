@@ -31,3 +31,7 @@ fn main() {
     let first_user_age = users.get("harkiwrat");
     println!("First user age: {:?}", first_user_age); // Some(22)
 }
+
+
+
+ 
