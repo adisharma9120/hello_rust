@@ -20,3 +20,14 @@ and the values are vectors of all corresponding values associated with each key.
      
     println!("{:?}", hm);
   }
+
+ use std::collections::HashMap;
+
+ fn group_of_key_value( vec:Vec<(String, i32)>)-> HashMap<String, i32>{
+
+    let mut hashmap = HashMap::new();
+    for (key, value ) in vec {
+        hashmap.insert(key , value);
+    }
+    return hashmap;
+ }
