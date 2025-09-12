@@ -6,5 +6,26 @@ fn main() {
        let second_number = v1_iter.next();
        let third_number = v1_iter.next();
     */
+    
+
     println!("{:?}", v1_iter);
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
