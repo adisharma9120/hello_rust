@@ -66,5 +66,8 @@ main(); */
 fn main() {
     let n: i32 = 12;
 
-    for i in 0..10 {
-        println!("{}x{}={}", n, i, n * 
+    for i in 1..=10 {
+        // 1 se 10 tak (inclusive)
+        println!("{} x {} = {}", n, i, n * i);
+    }
+}
