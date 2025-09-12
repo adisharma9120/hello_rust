@@ -14,13 +14,10 @@ fn main() {
     add_world(&mut s4);
     println!("After change: {}", s4);
 
-    // Lifetimes example
+    // Lifetimes example (both live long enough)
     let s5 = String::from("Aditya");
-    let result;
-    {
-        let s6 = String::from("Sharma");
-        result = longest(&s5, &s6);
-    }
+    let s6 = String::from("Sharma");
+    let result = longest(&s5, &s6);
     println!("Longest string is: {}", result);
 }
 
