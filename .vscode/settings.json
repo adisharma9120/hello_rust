@@ -1,9 +1,7 @@
 {
-  "editor.quickSuggestions": {
-    "other": true,
-    "comments": true,
-    "strings": true
-  },
-  "rust-analyzer.inlayHints.enable": true,
-  "rust-analyzer.hover.actions.enable": true
+  "rust-analyzer.cargo.buildScripts.enable": true,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "editor.hover.enabled": true,
+  "editor.inlayHints.enabled": "on"
 }
