@@ -9,5 +9,6 @@ fn main() {
 
     println!("Sum is : {}", sum);
 
+     for i  in v1_iter {}
     println!("{:?}", v1);
 }
