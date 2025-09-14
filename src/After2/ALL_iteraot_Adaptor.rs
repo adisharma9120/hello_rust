@@ -8,7 +8,7 @@ fn main() {
     // 2. filter → sirf even numbers lena
     let evens: Vec<_> = numbers.iter().filter(|x| *x % 2 == 0).collect();
     println!("Evens: {:?}", evens); // [2, 4]
-
+    
     // 3. take → pehle 2 numbers lena
     let first_two: Vec<_> = numbers.iter().take(2).collect();
     println!("First two: {:?}", first_two); // [1, 2]
