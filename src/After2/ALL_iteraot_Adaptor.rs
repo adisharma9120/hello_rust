@@ -34,3 +34,24 @@ fn main() {
     let all_lt10 = numbers.iter().all(|x| *x < 10);
     println!("All less than 10? {}", all_lt10); // true
 }
+
+
+
+fn main() {
+    let s = String::from("Hello, Rust!");
+    
+    let hello = &s[0..5];   // "Hello"
+    let rust  = &s[7..11];  // "Rust"
+
+    println!("{} and {}", hello, rust);
+}
+
+
+fn main() {
+    let mut s = String::from("Hello");
+
+    let slice = &s[0..2];  // borrow part
+    // s.push_str(" World"); // ❌ not allowed while slice exists
+
+    println!("{}", slice);  // "He"
+}
