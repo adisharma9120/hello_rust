@@ -11,7 +11,7 @@
 */
  // Write a function that takes string as an input and 
  //  return the first word from it ......
-/* 
+
 fn main()
 {
     let name = String::from("hello world");
@@ -35,5 +35,5 @@ str naam ka variable yaha ek local copy ban jaata hai (jo original name ka owner
      return ans;
  }
 
- */
+ 
  
