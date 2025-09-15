@@ -5,7 +5,7 @@ fn main() {
     // Variables
     let x = 10; // immutable variable
     let mut y = 20; // mutable variable
-    y = y + 5;
+    y += 5; // y ab 25 ho gaya
 
     // If-else condition
     if y > x {
@@ -14,7 +14,7 @@ fn main() {
         println!("x is greater or equal to y");
     }
 
-    // Loop
+    // Loop (1 to 4)
     for i in 1..5 {
         println!("Number: {}", i);
     }
