@@ -1,19 +1,19 @@
 fn main() {
     let numbers = vec![1, 2, 3, 4, 5];
 
-    // 1. map → har value ko badalna (double kar diya)
+    // 1. map → har value ko double karna
     let doubled: Vec<_> = numbers.iter().map(|x| x * 2).collect();
     println!("Doubled: {:?}", doubled); // [2, 4, 6, 8, 10]
 
     // 2. filter → sirf even numbers lena
     let evens: Vec<_> = numbers.iter().filter(|x| *x % 2 == 0).collect();
     println!("Evens: {:?}", evens); // [2, 4]
-    
+
     // 3. take → pehle 2 numbers lena
     let first_two: Vec<_> = numbers.iter().take(2).collect();
     println!("First two: {:?}", first_two); // [1, 2]
 
-    // 4. skip → pehle 2 chhod ke baaki lena
+    // 4. skip → pehle 2 chhodna
     let skip_two: Vec<_> = numbers.iter().skip(2).collect();
     println!("Skip two: {:?}", skip_two); // [3, 4, 5]
 
@@ -22,7 +22,7 @@ fn main() {
         println!("Index {} has value {}", i, val);
     }
 
-    // 6. sum → sabka total
+    // 6. sum → sabka total nikalna
     let total: i32 = numbers.iter().sum();
     println!("Sum: {}", total); // 15
 
@@ -33,25 +33,4 @@ fn main() {
     // 8. all → check karo sabhi number < 10 hain kya
     let all_lt10 = numbers.iter().all(|x| *x < 10);
     println!("All less than 10? {}", all_lt10); // true
-}
-
-
-
-fn main() {
-    let s = String::from("Hello, Rust!");
-    
-    let hello = &s[0..5];   // "Hello"
-    let rust  = &s[7..11];  // "Rust"
-
-    println!("{} and {}", hello, rust);
-}
-
-
-fn main() {
-    let mut s = String::from("Hello");
-
-    let slice = &s[0..2];  // borrow part
-    // s.push_str(" World"); // ❌ not allowed while slice exists
-
-    println!("{}", slice);  // "He"
 }

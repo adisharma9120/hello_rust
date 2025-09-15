@@ -1,4 +1,4 @@
-/* fn  main()
+fn  main()
 {
     let name = String::from("Aditya");
 
@@ -8,7 +8,7 @@
 
 }
 
-*/
+
  // Write a function that takes string as an input and 
  //  return the first word from it ......
 
