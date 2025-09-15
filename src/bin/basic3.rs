@@ -1,16 +1,16 @@
 fn main() {
-    // Immutable variable (change नहीं कर सकते)
+    // Immutable variable (change nahi kar sakte)
     let x: i32 = 10;
     println!("x = {}", x);
 
-    // Mutable variable (change कर सकते हो)
+    // Mutable variable (change kar sakte ho)
     let mut y: i32 = 20;
     println!("y (before) = {}", y);
     y = 25;
     println!("y (after) = {}", y);
 
-    // Floating point number
-    let pi: f64 = 3.14159;
+    // Floating point number (best practice: use constant)
+    let pi: f64 = std::f64::consts::PI;
     println!("pi = {}", pi);
 
     // Boolean
