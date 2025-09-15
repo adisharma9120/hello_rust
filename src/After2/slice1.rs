@@ -1,4 +1,13 @@
-/* fn main() {
+fn main() {
+    // Example 1
+    example1();
+
+    // Example 2
+    example2();
+}
+
+// ----------------- Example 1 -----------------
+fn example1() {
     let name = String::from("Hello World");
 
     let ans = first_word(name.clone()); // clone kyunki ownership ja rahi hai
@@ -9,21 +18,21 @@
 }
 
 fn first_word(s: String) -> String {
-    let mut ans = String::from("");
+    let mut ans = String::new();
     for i in s.chars() {
         if i == ' ' {
             break;
         }
-        ans.push(i); // push ek char leta hai, to_string() ki zarurat nahi
+        ans.push(i);
     }
-    return ans;
+    ans
 }
 
 fn last_word(s: String) -> String {
-    let mut ans = String::from("");
+    let mut ans = String::new();
     let mut collect = false;
 
-    for i in s.chars().rev() { // reverse loop
+    for i in s.chars().rev() {
         if i == ' ' {
             break;
         }
@@ -32,20 +41,18 @@ fn last_word(s: String) -> String {
     }
 
     if collect {
-        return ans.chars().rev().collect(); // kyunki reverse me ulta collect hua
+        return ans.chars().rev().collect(); // ulta se sahi order me convert
     }
 
-    return ans;
-
+    ans
 }
- */
 
- fn main()
- {
+// ----------------- Example 2 -----------------
+fn example2() {
     let mut word = String::from("hellor world");
     let word2 = &word[0..5];
 
-    println!("{}", word2);
-    
+    println!("Slice word2: {}", word2);
+
     word.clear();
- }
+}
