@@ -95,5 +95,5 @@ fn get_first_word(sentence: String) -> String {
         }
         ans.push(char);
     }
-    return ans;
+    ans
 }

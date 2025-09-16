@@ -28,7 +28,7 @@ fn take_and_return(s: String) -> String {
 }
 
 // Borrowing (read-only)
-fn print_length(s: &String) {
+fn print_length(s: &str) {
     println!("Length is: {}", s.len());
 }
 
