@@ -62,7 +62,7 @@ function main(){
     console.log(greeting[0]);
 }
 main(); */
-
+/* 
 fn main() {
     let n: i32 = 12;
 
@@ -70,4 +70,18 @@ fn main() {
         // 1 se 10 tak (inclusive)
         println!("{} x {} = {}", n, i, n * i);
     }
+}
+ */
+
+fn main() {
+    let  input = String::from("hello aditya");
+    
+    let s2 = take_ownership(input);
+    
+    println!("After the input: {}", s2);
+}
+
+fn take_ownership(str: String) -> String {
+    println!("After the Ownership: {}", str);
+    str // String ko wapas return kar rahe hain
 }
