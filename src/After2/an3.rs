@@ -15,4 +15,3 @@ fn main() {
     scores.remove("Alice");
     println!("After remove: {:?}", scores);
 }
-``
