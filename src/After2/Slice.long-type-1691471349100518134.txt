@@ -1,0 +1,2 @@
+[std::ops::Range<{integer}>; 1]
+&mut [std::ops::Range<{integer}>; 1]

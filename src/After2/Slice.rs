@@ -8,7 +8,7 @@
 
 }
 
-
+example ->1
  // Write a function that takes string as an input and
  //  return the first word from it ......
 
@@ -36,17 +36,14 @@ str naam ka variable yaha ek local copy ban jaata hai (jo original name ka owner
  }
 
 
-
-
-
 fn main() {
     let mut word = String::from("hello world");
     let word2 = &word[0..5];
 
     println!("{}", word2);
-    
+
 }
- */
+
 //  Reference ka use khatam hone ke baad hi clear() call kar
 fn main() {
     let mut word = String::from("hello world");
@@ -55,4 +52,21 @@ fn main() {
         println!("{}", word2);  // yaha tak reference ka kaam ho gaya
     }
     word.clear();  // ab safe hai
+}
+*/
+
+// Example-->2 reference or second approch to solve the code
+fn main() {
+    let name = String::from("hello world");
+
+    let mut space_index = 0;
+    for i in name.chars() {
+        if i == ' ' {
+            break;
+        }
+        space_index += 1;
+    }
+
+    let ans = &name[0..space_index];  // string ka slice liya
+    println!("Ans is : {}", ans);
 }
