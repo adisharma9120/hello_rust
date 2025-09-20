@@ -22,6 +22,8 @@ fn largest_string<'a>(a: &'a str, b: &'a str) -> &'a str {
     if a > b { a } else { b }
 }
  */
+
+// Example: largest_word (do string slices me se bada word return kare)
 fn main() {
     let s1 = String::from("rust");
     let s2 = String::from("programming");
@@ -33,3 +35,13 @@ fn main() {
 fn largest_word<'a>(a: &'a str, b: &'a str) -> &'a str {
     if a.len() > b.len() { a } else { b }
 }
+
+/*
+
+s1 = "rust"
+s2 = "programming"
+ Function largest_word ko dono ka reference diya (&s1, &s2).
+Function check karta hai:
+Agar a.len() > b.len() → return a
+Nahi to return b
+<'a> batata hai ki jo slice return karenge uski lifetime dono input ke lifetime se judi hai. */
