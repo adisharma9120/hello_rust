@@ -1,4 +1,4 @@
-fn main() {
+/* fn main() {
     let bigger_float = largest_f64(3.14, 2.72);
     let biggger_bool = largest_bool(true, false);
 
@@ -10,5 +10,14 @@ fn largest_f64(a: f64, b: f64) -> f64 {
     if a > b { a } else { b }
 }
 fn largest_bool(a: bool, b: bool) -> bool {
+    if a > b { a } else { b }
+}
+ */
+fn main() {
+    let bigger_string = largest_string("apple", "banana");
+    println!("Bigger string: {}", bigger_string);
+}
+
+fn largest_string<'a>(a: &'a str, b: &'a str) -> &'a str {
     if a > b { a } else { b }
 }
