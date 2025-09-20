@@ -11,7 +11,4 @@ fn main() {
     let avg = sum as f32 / count as f32;
 
     println!("Average Grade: {:.2}", avg);
-
-
-
 }
