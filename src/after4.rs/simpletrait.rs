@@ -22,8 +22,8 @@ fn main() {
 
     println!("{}", book.summarize());
 }
- */
 
+ // example ->>2
  trait Summarized {
     fn summarize(&self) -> String;
 }
@@ -85,4 +85,29 @@ fn main() {
 
     let cloned_book = book.clone(); // ✅ ab ye kaam karega
     print_summary_where(&cloned_book);
+}
+*/
+
+// Define a trait
+trait Summarized {
+    fn summarize(&self) -> String;
+}
+
+// Simple struct
+struct Book {
+    title: String,
+}
+
+// Implement the trait
+impl Summarized for Book {
+    fn summarize(&self) -> String {
+        format!("Book: {}", self.title)
+    }
+}
+
+fn main() {
+    let book = Book {
+        title: String::from("Rust 101"),
+    };
+    println!("{}", book.summarize());
 }
