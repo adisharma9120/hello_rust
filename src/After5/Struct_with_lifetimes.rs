@@ -23,7 +23,7 @@ fn main() {
 }
 
 
-U/* ser<'a> says: “I contain a reference &'a str that must live at least as long as 'a.”
+/* ser<'a> says: “I contain a reference &'a str that must live at least as long as 'a.”
 
 But name is created inside the inner block and dropped at the end of that block.
 
