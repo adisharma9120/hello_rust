@@ -1,4 +1,4 @@
-use std::thread;
+/* use std::thread;
 
 fn main() {
     let handle = thread::spawn(|| {
@@ -8,8 +8,20 @@ fn main() {
         }
     });
     for i in 0..50 {
-     
+
         println! {"Hi from main thread {}", i};
-    
+
     }
+}
+ */
+
+// 2. Thread with Join (Wait for Completion)
+use std::thread;
+
+fn main() {
+    thread::spawn(|| {
+        println!("Hello from a new thread!");
+    });
+
+    println!("Hello from the main thread!");
 }
