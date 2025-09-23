@@ -8,6 +8,8 @@ fn main() {
         }
     });
     for i in 0..50 {
+     
         println! {"Hi from main thread {}", i};
+    
     }
 }
