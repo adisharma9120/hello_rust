@@ -11,7 +11,6 @@ fn main() {
 
     handle.join().unwrap();
 }
- */
 
 
  // Multiple Threads
@@ -31,4 +30,18 @@ fn main() {
     t2.join().unwrap();
 }
 
+ */
 
+// Thread Returning a Value
+ 
+ use std::thread;
+
+fn main() {
+    let handle = thread::spawn(|| {
+        let sum: i32 = (1..=10).sum();
+        sum
+    });
+
+    let result = handle.join().unwrap();
+    println!("Sum from thread: {}", result);
+}
