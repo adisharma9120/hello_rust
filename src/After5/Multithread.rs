@@ -13,7 +13,7 @@ fn main() {
 
     }
 }
- */
+
 
 // 2. Thread with Join (Wait for Completion)
 use std::thread;
@@ -24,4 +24,20 @@ fn main() {
     });
 
     println!("Hello from the main thread!");
+}
+*/
+
+//3. Thread with Sleep
+use std::thread;
+use std::time::Duration;
+
+fn main() {
+    let handle = thread::spawn(|| {
+        for i in 1..=5 {
+            println!("Child thread: {}", i);
+            thread::sleep(Duration::from_millis(500));
+        }
+    });
+
+    handle.join().unwrap();
 }
