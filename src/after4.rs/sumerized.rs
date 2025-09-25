@@ -21,7 +21,8 @@ fn main() {
 
     println!("{}", user.summarize());
 }
- */
+
+Exa->>>2
 trait Describable {
     fn describe(&self) -> String;
 }
@@ -46,4 +47,29 @@ fn main() {
     };
 
     println!("{}", book.describe());
+}
+*/
+
+trait Info {
+    fn show(&self) -> String;
+}
+
+struct Book {
+    title: String,
+    author: String,
+}
+
+impl Info for Book {
+    fn show(&self) -> String {
+        format!("{} by {}", self.title, self.author)
+    }
+}
+
+fn main() {
+    let book = Book {
+        title: "Mathematics for Class 12".to_string(),
+        author: "R.D. Sharma".to_string(),
+    };
+
+    println!("{}", book.show());
 }
