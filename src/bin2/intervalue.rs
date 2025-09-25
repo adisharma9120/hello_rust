@@ -8,7 +8,7 @@
 }
  */
 
-fn main() {
+pub fn main() {
     let x: Vec<i32> = vec![9, 10]; // directly initialize with values
     println!("{:?}", x); // prints [9, 10]
 }
