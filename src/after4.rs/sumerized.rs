@@ -1,4 +1,4 @@
-trait Summarized {
+/* trait Summarized {
     fn summarize(&self) -> String;
 }
 
@@ -20,4 +20,30 @@ fn main() {
     };
 
     println!("{}", user.summarize());
+}
+ */
+trait Describable {
+    fn describe(&self) -> String;
+}
+
+struct Book {
+    title: String,
+    author: String,
+    pages: u32,
+}
+
+impl Describable for Book {
+    fn describe(&self) -> String {
+        format!("'{}' by {} ({} pages)", self.title, self.author, self.pages)
+    }
+}
+
+fn main() {
+    let book = Book {
+        title: String::from("Mathematics for Class 12"),
+        author: String::from("R.D. Sharma"),
+        pages: 1250,
+    };
+
+    println!("{}", book.describe());
 }
