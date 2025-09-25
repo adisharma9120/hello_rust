@@ -1,7 +1,7 @@
  pub fn main ()
 {
     create_str();
-    //garbag collector
+ 
     print!("{}",23);
 }
 
@@ -9,6 +9,6 @@
 {
 let s1 = String::from("hi there");
     print!("{}",s1);
-    let s2 = s1;
+    let s2 = &s1;
     println!("{}",s2);
 }
