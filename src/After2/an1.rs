@@ -16,7 +16,7 @@
 }
 
 
- */
+
 fn main() {
     println!("hello world");
     let name = "Adiii";
@@ -36,4 +36,47 @@ fn main() {
     } else {
         println!("You are 70 kg or less.");
     }
+}
+
+*/
+// main.rs
+fn main() {
+    // Call a function
+    greet("Aditya");
+
+    // Array example
+    let numbers = [10, 20, 30, 40, 50];
+    println!("Numbers in the array: {:?}", numbers);
+
+    // Sum of array elements
+    let total: i32 = sum_array(&numbers);
+    println!("Sum of numbers: {}", total);
+
+    // Tuple example
+    let person: (&str, u32, f32) = ("Aditya", 22, 72.5);
+    println!(
+        "Name: {}, Age: {}, Weight: {}",
+        person.0, person.1, person.2
+    );
+
+    // Conditional check with tuple
+    if person.2 > 70.0 {
+        println!("You are above 70 kg.");
+    } else {
+        println!("You are 70 kg or less.");
+    }
+}
+
+// Function to greet a person
+fn greet(name: &str) {
+    println!("Hello, {}!", name);
+}
+
+// Function to sum elements of an array
+fn sum_array(arr: &[i32]) -> i32 {
+    let mut sum = 0;
+    for &num in arr {
+        sum += num;
+    }
+    sum
 }
